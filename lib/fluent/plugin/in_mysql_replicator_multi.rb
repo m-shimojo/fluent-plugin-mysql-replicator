@@ -4,6 +4,8 @@ module Fluent::Plugin
   class MysqlReplicatorMultiInput < Fluent::Input
     Fluent::Plugin.register_input('mysql_replicator_multi', self)
 
+    helpers :thread
+
     def initialize
       require 'mysql2'
       require 'digest/sha1'
