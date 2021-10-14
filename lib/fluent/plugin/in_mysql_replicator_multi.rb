@@ -1,4 +1,4 @@
-require 'fluent/input'
+require 'fluent/plugin/input'
 
 module Fluent::Plugin
   class MysqlReplicatorMultiInput < Fluent::Plugin::Input
