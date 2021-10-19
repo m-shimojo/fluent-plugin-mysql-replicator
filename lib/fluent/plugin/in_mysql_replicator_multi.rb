@@ -54,8 +54,12 @@ module Fluent::Plugin
       end
     end
 
-    def shutdown
+    def stop
       @running = false
+      super
+    end
+
+    def shutdown
       @threads.each(&:join)
       super
     end
